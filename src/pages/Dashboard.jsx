@@ -1,13 +1,20 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function Dashboard() {
+export default function Dashboard({ propertyTokens }) {
   return (
-    <Card className="bg-white shadow-md">
-      <CardContent className="space-y-4 p-6">
-        <h2 className="text-xl font-semibold text-indigo-700">📊 Dashboard</h2>
-        <p>You own 500 tokens in Sydney. Monthly yield: 35.5 USDC</p>
-        <p>You own 750 tokens in Brisbane. Monthly yield: 49.5 USDC</p>
+    <Card className="bg-white shadow-sm border rounded-md">
+      <CardContent className="p-6 space-y-4">
+        <h2 className="text-2xl font-semibold text-indigo-700">📊 Your Property Portfolio</h2>
+        {Object.entries(propertyTokens).map(([city, { tokens, income }]) => (
+          <div key={city} className="border-b pb-2">
+            <p className="capitalize font-medium">{city} Tokens: <strong>{tokens}</strong></p>
+            <p>Monthly Income: <strong>{income.toFixed(2)} USDC</strong></p>
+          </div>
+        ))}
+        <p>Total Estimated USDC Income (Monthly): <strong>{
+          Object.values(propertyTokens).reduce((sum, p) => sum + p.income, 0).toFixed(2)
+        } USDC</strong></p>
       </CardContent>
     </Card>
   );

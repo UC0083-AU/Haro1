@@ -9,41 +9,37 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 export default function Charts() {
-  const data = {
+  const chartData = {
     labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
     datasets: [
       {
-        label: "Monthly Income (USDC)",
-        data: [5.2, 5.8, 6.1, 6.5, 6.9, 7.3],
-        borderColor: "#4f46e5",
-        backgroundColor: "rgba(99, 102, 241, 0.2)"
-      }
-    ]
+        label: "USDC Income",
+        data: [7.2, 7.5, 7.9, 8.3, 8.6, 9.1],
+        borderColor: "#00A8A5",
+        backgroundColor: "#00A8A540",
+      },
+    ],
   };
 
-  const options = {
+  const chartOptions = {
     responsive: true,
     plugins: {
-      legend: {
-        position: "top"
-      },
-      title: {
-        display: true,
-        text: "Your Rental Income Over Time"
-      }
-    }
+      legend: { position: "top" },
+      title: { display: true, text: "Monthly USDC Income Trend" },
+    },
   };
 
   return (
-    <Card className="bg-white shadow-md">
+    <Card className="bg-white shadow-sm border rounded-md">
       <CardContent className="p-6">
-        <Line data={data} options={options} />
+        <h2 className="text-2xl font-semibold text-indigo-700 mb-4">📈 Income Chart</h2>
+        <Line options={chartOptions} data={chartData} />
       </CardContent>
     </Card>
   );

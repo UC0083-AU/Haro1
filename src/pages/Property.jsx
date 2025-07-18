@@ -8,17 +8,17 @@ export default function Property() {
   const [amountMelbourne, setAmountMelbourne] = useState("");
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10 bg-gray-50 min-h-screen py-10 px-4 font-sans text-gray-900">
       {/* Sydney Property */}
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-sm border rounded-md">
         <CardContent className="p-6 space-y-4">
-          <h2 className="text-xl font-semibold text-indigo-700">🏠 Sydney Apartment – 99 George St</h2>
-          <p className="text-gray-700">Price per Token: <strong>50 USDC</strong></p>
-          <p className="text-gray-700">Total Tokens: 10,000</p>
-          <p className="text-gray-700">Yield: 7.5% / year</p>
+          <h2 className="text-2xl font-semibold text-indigo-700">🏠 Sydney Apartment – 99 George St</h2>
+          <p>Price per Token: <strong>50 USDC</strong></p>
+          <p>Total Tokens: 10,000</p>
+          <p>Yield: 7.5% / year</p>
 
           <div className="mt-4 space-y-2 bg-indigo-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-indigo-800">Buy Tokens</h3>
+            <h3 className="text-lg font-medium text-indigo-800">Buy Tokens</h3>
             <input
               type="number"
               placeholder="Enter amount"
@@ -37,15 +37,15 @@ export default function Property() {
       </Card>
 
       {/* Brisbane Property */}
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-sm border rounded-md">
         <CardContent className="p-6 space-y-4">
-          <h2 className="text-xl font-semibold text-pink-700">🏢 Brisbane Apartment – Riverfront Views</h2>
-          <p className="text-gray-700">Price per Token: <strong>45 USDC</strong></p>
-          <p className="text-gray-700">Total Tokens: 12,000</p>
-          <p className="text-gray-700">Yield: 8.1% / year</p>
+          <h2 className="text-2xl font-semibold text-pink-700">🏢 Brisbane Apartment – Riverfront Views</h2>
+          <p>Price per Token: <strong>45 USDC</strong></p>
+          <p>Total Tokens: 12,000</p>
+          <p>Yield: 8.1% / year</p>
 
           <div className="mt-4 space-y-2 bg-pink-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-pink-800">Buy Tokens</h3>
+            <h3 className="text-lg font-medium text-pink-800">Buy Tokens</h3>
             <input
               type="number"
               placeholder="Enter amount"
@@ -64,15 +64,15 @@ export default function Property() {
       </Card>
 
       {/* Melbourne Property */}
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-sm border rounded-md">
         <CardContent className="p-6 space-y-4">
-          <h2 className="text-xl font-semibold text-purple-700">🏬 Melbourne Apartment – Central Business District</h2>
-          <p className="text-gray-700">Price per Token: <strong>48 USDC</strong></p>
-          <p className="text-gray-700">Total Tokens: 11,000</p>
-          <p className="text-gray-700">Yield: 7.9% / year</p>
+          <h2 className="text-2xl font-semibold text-purple-700">🏬 Melbourne Apartment – Central Business District</h2>
+          <p>Price per Token: <strong>48 USDC</strong></p>
+          <p>Total Tokens: 11,000</p>
+          <p>Yield: 7.9% / year</p>
 
           <div className="mt-4 space-y-2 bg-purple-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-purple-800">Buy Tokens</h3>
+            <h3 className="text-lg font-medium text-purple-800">Buy Tokens</h3>
             <input
               type="number"
               placeholder="Enter amount"
