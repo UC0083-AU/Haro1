@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Property() {
   const [amountSydney, setAmountSydney] = useState("");
   const [amountBrisbane, setAmountBrisbane] = useState("");
+  const [amountMelbourne, setAmountMelbourne] = useState("");
 
   return (
     <div className="space-y-8">
@@ -56,6 +57,33 @@ export default function Property() {
             {amountBrisbane && (
               <p className="text-green-700 mt-2">
                 Simulated purchase of <strong>{amountBrisbane}</strong> Brisbane tokens complete.
+              </p>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Melbourne Property */}
+      <Card className="bg-white shadow-md">
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-xl font-semibold text-purple-700">🏬 Melbourne Apartment – Central Business District</h2>
+          <p className="text-gray-700">Price per Token: <strong>48 USDC</strong></p>
+          <p className="text-gray-700">Total Tokens: 11,000</p>
+          <p className="text-gray-700">Yield: 7.9% / year</p>
+
+          <div className="mt-4 space-y-2 bg-purple-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-purple-800">Buy Tokens</h3>
+            <input
+              type="number"
+              placeholder="Enter amount"
+              className="border p-2 w-full max-w-xs"
+              value={amountMelbourne}
+              onChange={(e) => setAmountMelbourne(e.target.value)}
+            />
+            <Button className="mt-2">Simulate Purchase</Button>
+            {amountMelbourne && (
+              <p className="text-green-700 mt-2">
+                Simulated purchase of <strong>{amountMelbourne}</strong> Melbourne tokens complete.
               </p>
             )}
           </div>
