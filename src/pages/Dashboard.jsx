@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function Dashboard({ propertyTokens }) {
+export default function Dashboard() {
+  const [propertyTokens] = useState({
+    sydney: { tokens: 500, income: 35.5 },
+    brisbane: { tokens: 750, income: 49.5 },
+    melbourne: { tokens: 620, income: 43.8 }
+  });
+
   return (
     <Card className="bg-white shadow-sm border rounded-md">
       <CardContent className="p-6 space-y-4">
