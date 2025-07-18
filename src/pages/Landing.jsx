@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-export default function Landing({ onEnterDashboard }) {
+export default function Landing() {
+  const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 font-sans text-gray-900">
+    <div className="bg-gray-50 pt-6 font-sans text-gray-900">
       <div className="max-w-4xl mx-auto bg-white shadow-sm border rounded-md p-8 space-y-6 text-center">
         <h1 className="text-4xl font-bold text-indigo-700">🏡 Welcome to Haro Real Estate</h1>
         <p className="text-lg text-gray-700">
@@ -30,13 +32,6 @@ export default function Landing({ onEnterDashboard }) {
             </p>
           </div>
         </div>
-
-        <Button
-          className="mt-8 px-8 py-3 bg-indigo-600 text-white rounded hover:bg-indigo-700"
-          onClick={onEnterDashboard}
-        >
-          Enter Dashboard
-        </Button>
       </div>
     </div>
   );
